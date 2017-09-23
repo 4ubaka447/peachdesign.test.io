@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>traffic-light</title>
+        <style>
+            .traffic_light_zone {
+                
+                background-color: gray;
+                width: 490px;
+                height: 180px;
+                margin: 200px auto;
+                
+                padding: 20px;
+            }
+            
+            .green { 
+                background-color: darkgreen;
+                float: left;
+                margin-top: 10px;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+            
+            .yellow { 
+                background-color: olive;
+                float: left;
+                margin-left: 170px;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+            
+            .red { 
+                background-color: darkred;
+                float: left;
+                margin-left: 170px;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+            }
+            
+            .newgreen {
+                background-color: darkred;
+            }
+
+  </style>
+    </head>
+    
+    <body>
+
+    <div class="traffic_light_zone">
+        <form id="mainForm" onsubmit="return false;">
+                <input type="text" name="minute" id="minute">
+                <input type="submit" for="minute" value="Показать" id="btn" onclick="trafficLight(); return false;">
+        </form>
+
+        <div class="green"><div>
+        <div class="yellow"><div>
+        <div class="red"><div>
+
+    </div>
+
+    <script>
+
+
+        function trafficLight() {
+        
+            var minute = document.getElementById("minute").value;
+
+
+            if(minute%5>=1 && minute%5<=3)
+                document.querySelector('.green').style.backgroundColor = "lime";
+
+            else if (minute>0)
+                document.querySelector('.red').style.backgroundColor = "red";
+
+        }
+        
+        
+        
+    </script>
+    </body>
+</html>
