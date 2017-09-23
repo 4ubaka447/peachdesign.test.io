@@ -64,19 +64,8 @@ body {
 }
 
 .switch_check:checked + .switch_label:after{
-    transform: translateX(-145px) scaleX(1.1);
-    /*animation: slip_scale 1s;*/
+    transform: translateX(-145px);
 }
 
-/*@keyframes slip_scale {
-
-    50% {
-        width: 200px;
-    }
-    
-    100% {
-        width: 140px;
-    }
-}*/
 
 
